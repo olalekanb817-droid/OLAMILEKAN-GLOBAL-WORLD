@@ -29,16 +29,17 @@
     .links a { color: var(--muted); font-size: .92rem; text-decoration: none; }
     .links a:hover, .links a:focus-visible, .contact-details a:hover { color: var(--gold); }
     a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-    .hero { min-height: 600px; display: grid; align-items: center; padding: 88px 0; background: radial-gradient(ellipse at 75% 45%, rgba(156, 121, 48, .18), transparent 35%), linear-gradient(120deg, #101010 45%, #171613); }
+    .hero { min-height: 600px; display: grid; align-items: center; padding: 88px 0; background: radial-gradient(ellipse at 75% 45%, rgba(156, 121, 48, .18), transparent 35%), linear-gradient(120deg, rgba(16,16,16,.96), rgba(16,16,16,.86)); }
     .hero-copy { max-width: 760px; }
     .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .77rem; font-weight: 700; }
     h1 { margin: 18px 0; font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: 1.02; letter-spacing: -.045em; }
     h1 span { color: var(--gold); }
     .hero p { color: var(--muted); font-size: 1.12rem; max-width: 620px; }
     .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
-    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid var(--gold); border-radius: 4px; background: var(--gold); color: #14120d; font: inherit; font-weight: 750; text-align: center; text-decoration: none; cursor: pointer; }
+    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid var(--gold); border-radius: 4px; background: var(--gold); color: #17140d; text-decoration: none; font-weight: 700; cursor: pointer; transition: background .2s ease, transform .2s ease; }
     .button:hover { background: #e5c875; }
     .button.secondary { background: transparent; color: var(--ink); }
+    .button.secondary:hover { background: rgba(215, 180, 90, .08); }
     section { padding: 82px 0; }
     .section-heading { max-width: 680px; margin-bottom: 34px; }
     h2 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; }
@@ -122,7 +123,7 @@
           <div class="eyebrow">About us</div>
           <h2>Connecting people with products and services.</h2>
         </div>
-        <p>OLAMILEKAN GLOBAL WORLD INVESTMENT brings together a range of business interests, including technology, online supermarket products, African products, logistics and international trade. Contact us to ask about availability, orders or services.</p>
+        <p>OLAMILEKAN GLOBAL WORLD INVESTMENT brings together a range of business interests, including technology, online supermarket products, African products, logistics and international trade. Connecting everyday needs with dependable service and opportunity.</p>
       </div>
     </section>
 
@@ -196,8 +197,8 @@
       const email = data.get('email') ? `\nEmail: ${data.get('email')}` : '';
       const text = `Hello, my name is ${data.get('name')}.${email}\n\n${data.get('message')}`;
       const whatsappUrl = `https://wa.me/2348025592137?text=${encodeURIComponent(text)}`;
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      status.textContent = 'Your WhatsApp message is ready. Review it in WhatsApp and tap Send. If WhatsApp did not open, use the direct WhatsApp contact link.';
+      status.textContent = 'Opening WhatsApp with your message. Review it there and tap Send.';
+      window.location.assign(whatsappUrl);
     });
   </script>
 </body>
