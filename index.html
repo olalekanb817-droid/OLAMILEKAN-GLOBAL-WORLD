@@ -165,13 +165,9 @@
       const data = new FormData(form);
       const email = data.get('email') ? `\nEmail: ${data.get('email')}` : '';
       const text = `Hello, my name is ${data.get('name')}.${email}\n\n${data.get('message')}`;
-      const url = `https://wa.me/2348025592137?text=${encodeURIComponent(text)}`;
-      const whatsappWindow = window.open(url, '_blank', 'noopener,noreferrer');
-      if (whatsappWindow) {
-        status.textContent = 'WhatsApp opened with your message. Please send it there to complete your enquiry.';
-      } else {
-        status.textContent = 'Your browser blocked the WhatsApp window. Use the WhatsApp link on this page to continue.';
-      }
+      const whatsappUrl = `https://wa.me/2348025592137?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      status.textContent = "Your WhatsApp message is ready. Review it in WhatsApp and tap Send. If WhatsApp did not open, use the direct WhatsApp contact button.";
     });
   </script>
 </body>
