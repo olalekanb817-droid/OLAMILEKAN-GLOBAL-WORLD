@@ -1,1 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Explore technology, supermarket, African products, logistics and trade services from OLAMILEKAN GLOBAL WORLD.">
+  <title>OLAMILEKAN GLOBAL WORLD | One World. Your Vision.</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7f5ef;
+      --muted: #c3c0b7;
+      --gold: #d7b45a;
+      --deep-gold: #9c7930;
+      --surface: #181817;
+      --line: rgba(215, 180, 90, .28);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #101010; color: var(--ink); line-height: 1.6; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { border-bottom: 1px solid var(--line); background: rgba(16, 16, 16, .94); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 750; letter-spacing: .04em; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-size: 22px; }
+    .brand-name { max-width: 230px; font-size: .82rem; line-height: 1.25; }
+    .links { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
+    .links a { color: var(--muted); font-size: .92rem; text-decoration: none; }
+    .links a:hover, .links a:focus-visible { color: var(--gold); }
+    .hero { min-height: 600px; display: grid; align-items: center; padding: 88px 0; background: radial-gradient(ellipse at 75% 45%, rgba(156, 121, 48, .18), transparent 35%), linear-gradient(120deg, #101010 45%, #171613); }
+    .hero-copy { max-width: 760px; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .77rem; font-weight: 700; }
+    h1 { margin: 18px 0; font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: 1.02; letter-spacing: -.045em; }
+    h1 span { color: var(--gold); }
+    .hero p { color: var(--muted); font-size: 1.12rem; max-width: 620px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid var(--gold); border-radius: 4px; background: var(--gold); color: #14120d; font-weight: 750; text-decoration: none; }
+    .button:hover { background: #e5c875; }
+    .button.secondary { background: transparent; color: var(--ink); }
+    section { padding: 82px 0; }
+    .section-heading { max-width: 680px; margin-bottom: 34px; }
+    h2 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; }
+    .section-heading p, .about p { color: var(--muted); }
+    .about { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #141413; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .about p { margin-bottom: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { padding: 25px; border: 1px solid var(--line); background: linear-gradient(145deg, #1d1c19, #151514); border-radius: 6px; }
+    .card .icon { color: var(--gold); font-size: 1.5rem; }
+    .card h3 { margin: 12px 0 8px; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .contact { border-top: 1px solid var(--line); background: radial-gradient(ellipse at 20% 20%, rgba(156, 121, 48, .11), transparent 40%), #141413; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; }
+    .contact-details p { color: var(--muted); }
+    .contact-details a { color: var(--gold); text-decoration: none; }
+    form { display: grid; gap: 14px; }
+    label { display: grid; gap: 6px; font-size: .9rem; font-weight: 650; }
+    input, textarea { width: 100%; padding: 12px 13px; border: 1px solid #49463e; border-radius: 4px; background: #101010; color: var(--ink); font: inherit; }
+    input:focus, textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+    textarea { min-height: 120px; resize: vertical; }
+    .form-note, #form-status { color: var(--muted); font-size: .88rem; }
+    #form-status { min-height: 1.4em; }
+    footer { padding: 25px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; }
+      .links { gap: 14px; }
+      .hero { min-height: auto; padding: 75px 0; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 62px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="OLAMILEKAN GLOBAL WORLD home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span class="brand-name">OLAMILEKAN<br>GLOBAL WORLD</span>
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-copy">
+        <div class="eyebrow">Trade · Technology · Everyday essentials</div>
+        <h1>One World.<br><span>Your Vision.</span></h1>
+        <p>Discover technology, everyday essentials and African products, alongside logistics and international trade services from OLAMILEKAN GLOBAL WORLD.</p>
+        <div class="actions">
+          <a class="button" href="#products">Explore what we offer</a>
+          <a class="button secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="eyebrow">About us</div>
+          <h2>Connecting people with products and services.</h2>
+        </div>
+        <p>OLAMILEKAN GLOBAL WORLD brings together a range of business interests, including technology products, supermarket essentials, African products, logistics and international trade. Contact us to ask about availability, orders or services.</p>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Products and services</div>
+          <h2>Explore our business areas</h2>
+          <p>Get in touch to enquire about current products and service details.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="icon" aria-hidden="true">◇</div><h3>Technology</h3><p>Phones, iPads, laptops and accessories.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">✳</div><h3>Supermarket</h3><p>Everyday supermarket products and essentials.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">◈</div><h3>African Products</h3><p>Products reflecting African goods and makers.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">⌁</div><h3>Logistics</h3><p>Ask us about logistics services and arrangements.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">⇄</div><h3>International Trade</h3><p>Enquire about international trade services.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">＋</div><h3>Customer Enquiries</h3><p>Contact us with questions about products, orders or services.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-details">
+          <div class="eyebrow">Contact</div>
+          <h2>How can we help?</h2>
+          <p>Send an enquiry through WhatsApp, or email us directly.</p>
+          <p><strong>Email:</strong> <a href="mailto:olalekanb817@gmail.com">olalekanb817@gmail.com</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348025592137">+234 802 559 2137</a></p>
+        </div>
+        <div>
+          <form id="contact-form">
+            <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
+            <label for="email">Your email (optional)<input id="email" name="email" type="email" autocomplete="email"></label>
+            <label for="message">Your message<textarea id="message" name="message" required></textarea></label>
+            <p class="form-note">This form opens WhatsApp with your message. It does not send email. To email us, use the email link instead.</p>
+            <button class="button" type="submit">Continue to WhatsApp</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© <span id="year"></span> OLAMILEKAN GLOBAL WORLD</span><span>One World. Your Vision.</span></div>
+  </footer>
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const email = data.get('email') ? `\nEmail: ${data.get('email')}` : '';
+      const text = `Hello, my name is ${data.get('name')}.${email}\n\n${data.get('message')}`;
+      const url = `https://wa.me/2348025592137?text=${encodeURIComponent(text)}`;
+      const whatsappWindow = window.open(url, '_blank', 'noopener,noreferrer');
+      if (whatsappWindow) {
+        status.textContent = 'WhatsApp opened with your message. Please send it there to complete your enquiry.';
+      } else {
+        status.textContent = 'Your browser blocked the WhatsApp window. Use the WhatsApp link on this page to continue.';
+      }
+    });
+  </script>
+</body>
+</html>
