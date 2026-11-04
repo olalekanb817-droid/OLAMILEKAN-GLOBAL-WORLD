@@ -1,39 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101010">
-  <meta name="description" content="Professional technology, supermarket, African products, logistics and trade services from OLAMILEKAN GLOBAL WORLD INVESTMENT.">
+  <meta name="theme-color" content="#0b0b0a">
+  <meta name="description" content="Shop technology, supermarket essentials and African products from OLAMILEKAN GLOBAL WORLD INVESTMENT. Enquire about Nigerian Naira prices, logistics and international trade.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="OLAMILEKAN GLOBAL WORLD INVESTMENT">
   <title>OLAMILEKAN GLOBAL WORLD INVESTMENT | One World. Your Vision.</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OLAMILEKAN GLOBAL WORLD INVESTMENT">
+  <meta property="og:description" content="Technology, supermarket essentials, African products, logistics and international trade.">
+  <meta property="og:locale" content="en_NG">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OLAMILEKAN GLOBAL WORLD INVESTMENT",
+    "founder": {
+      "@type": "Person",
+      "name": "Bello Ashimiu Olalekan"
+    },
+    "email": "olalekanb817@gmail.com",
+    "telephone": "+2348025592137",
+    "description": "Technology products, supermarket essentials, African products, logistics and international trade enquiries."
+  }
+  </script>
+
   <style>
     :root {
       color-scheme: dark;
-      --bg: #0b0b0a;
-      --bg-soft: #141412;
-      --panel: #171613;
-      --panel-alt: #1d1b17;
-      --line: rgba(215, 180, 90, .28);
-      --ink: #f8f5ee;
-      --muted: #cbc5b8;
+      --background: #0b0b0a;
+      --surface: #151513;
+      --panel: #1d1b17;
       --gold: #d7b45a;
-      --gold-strong: #f1d28d;
-      --shadow: rgba(0, 0, 0, .28);
-      font-family: Inter, "Segoe UI", sans-serif;
+      --gold-light: #f1d28d;
+      --text: #f8f5ee;
+      --muted: #cbc5b8;
+      --border: rgba(215, 180, 90, .28);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--ink);
+      background: var(--background);
+      color: var(--text);
       line-height: 1.6;
-      font-family: Inter, "Segoe UI", sans-serif;
     }
 
     a { color: inherit; }
-    img { max-width: 100%; display: block; }
+
+    button, input, textarea { font: inherit; }
+
     .wrap {
       width: min(1120px, calc(100% - 40px));
       margin-inline: auto;
@@ -42,10 +69,10 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 10;
       background: rgba(11, 11, 10, .96);
+      border-bottom: 1px solid var(--border);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
     }
 
     .nav {
@@ -66,181 +93,153 @@
     }
 
     .brand-mark {
-      position: relative;
       width: 42px;
       height: 42px;
       display: grid;
       place-items: center;
+      flex: 0 0 42px;
       border: 1px solid var(--gold);
       border-radius: 50%;
-      background: radial-gradient(circle at center, rgba(215,180,90,.25), rgba(215,180,90,.03) 55%, transparent 70%);
-      box-shadow: inset 0 0 18px rgba(215,180,90,.14), 0 0 24px rgba(215,180,90,.12);
       color: var(--gold);
-      overflow: hidden;
-    }
-
-    .brand-mark::before,
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      inset: 7px;
-      border: 1px solid rgba(215,180,90,.7);
-      border-radius: 50%;
-    }
-
-    .brand-mark::after {
-      inset: 15px;
-      border-color: rgba(215,180,90,.45);
+      font-size: 23px;
+      box-shadow: 0 0 20px rgba(215, 180, 90, .12);
     }
 
     .brand-name {
-      font-size: .82rem;
-      line-height: 1.25;
       max-width: 250px;
+      font-size: .8rem;
+      line-height: 1.25;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 22px;
-      align-items: center;
+      gap: 10px 20px;
     }
 
     .links a {
       color: var(--muted);
       font-size: .92rem;
       text-decoration: none;
-      transition: color .2s ease;
     }
 
     .links a:hover,
     .links a:focus-visible,
-    .contact-details a:hover,
-    .site-link:hover {
-      color: var(--gold);
-    }
+    .contact a:hover { color: var(--gold-light); }
 
-    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
       outline: 2px solid var(--gold);
       outline-offset: 4px;
     }
 
     .hero {
-      min-height: 620px;
-      display: grid;
-      align-items: center;
-      padding: 88px 0 72px;
+      padding: 82px 0;
       background:
-        radial-gradient(ellipse at 80% 40%, rgba(156, 121, 48, .18), transparent 34%),
-        linear-gradient(120deg, rgba(17,17,17,.98), rgba(11,11,10,.96));
+        radial-gradient(ellipse at 80% 40%, rgba(156, 121, 48, .2), transparent 36%),
+        linear-gradient(120deg, #121210, var(--background));
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr .65fr;
+      grid-template-columns: 1.3fr .7fr;
       gap: 36px;
       align-items: center;
     }
 
-    .hero-copy { max-width: 760px; }
-
     .eyebrow {
       color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: .18em;
       font-size: .77rem;
-      font-weight: 700;
+      font-weight: 750;
+      letter-spacing: .17em;
+      text-transform: uppercase;
     }
 
     h1 {
       margin: 18px 0;
-      font-size: clamp(2.7rem, 7vw, 5.4rem);
+      font-size: clamp(2.7rem, 7vw, 5.2rem);
       line-height: 1.02;
       letter-spacing: -.045em;
     }
 
     h1 span { color: var(--gold); }
-    .hero p { color: var(--muted); font-size: 1.12rem; max-width: 620px; }
+
+    .hero-copy > p,
+    .section-heading > p,
+    .about p,
+    .card p,
+    .contact p {
+      color: var(--muted);
+    }
+
+    .hero-copy > p {
+      max-width: 640px;
+      font-size: 1.08rem;
+    }
+
+    .hero-panel,
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: linear-gradient(145deg, #211e18, var(--surface));
+    }
+
+    .hero-panel { padding: 26px; }
+
+    .hero-panel h2 { font-size: 1.25rem; }
+
+    .hero-panel li + li { margin-top: 8px; }
+
+    .hero-panel ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
+      gap: 12px;
+      margin-top: 26px;
     }
 
     .button {
-      display: inline-flex;
       min-height: 48px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0 20px;
+      padding: 0 18px;
       border: 1px solid var(--gold);
       border-radius: 4px;
       background: var(--gold);
-      color: #0d0d0d;
-      font-weight: 700;
+      color: #10100e;
+      font-weight: 750;
       text-decoration: none;
-      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
-      box-shadow: 0 12px 25px rgba(215,180,90,.18);
+      cursor: pointer;
     }
 
-    .button:hover {
-      background: var(--gold-strong);
-      transform: translateY(-1px);
-    }
+    .button:hover { background: var(--gold-light); }
 
     .button.secondary {
       background: transparent;
-      color: var(--ink);
-      box-shadow: none;
+      color: var(--text);
     }
 
-    .button.secondary:hover {
-      background: rgba(215, 180, 90, .08);
+    section { padding: 72px 0; }
+
+    .about,
+    .services {
+      border-block: 1px solid var(--border);
+      background: var(--surface);
     }
 
-    .hero-panel {
-      background: linear-gradient(145deg, rgba(27, 25, 21, .95), rgba(18, 18, 17, .95));
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 26px 22px;
-      box-shadow: 0 24px 50px rgba(0,0,0,.26);
-    }
-
-    .stat-grid {
+    .about-grid,
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 14px;
-    }
-
-    .stat {
-      padding: 18px 16px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: rgba(255,255,255,.02);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.7rem;
-      line-height: 1.1;
-      color: var(--gold);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: .82rem;
-    }
-
-    section {
-      padding: 82px 0;
-    }
-
-    .section-heading {
-      max-width: 680px;
-      margin-bottom: 34px;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
     }
 
     h2 {
@@ -249,103 +248,98 @@
       line-height: 1.12;
     }
 
-    .section-heading p,
-    .about p,
-    .contact-details p,
-    .card p,
-    .product-note {
-      color: var(--muted);
-    }
-
-    .about {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--bg-soft);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 28px;
     }
 
     .about-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 12px 20px;
-      margin-top: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 16px;
       padding: 0;
       list-style: none;
-      color: var(--ink);
     }
 
     .about-list li::before {
       content: "✓";
+      margin-right: 8px;
       color: var(--gold);
-      margin-right: 10px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
-    .card {
-      min-width: 0;
-      padding: 25px;
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg, var(--panel-alt), var(--panel));
-      border-radius: 6px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.12);
-    }
+    .card { min-width: 0; padding: 22px; }
 
-    .card .icon {
+    .card-icon {
       color: var(--gold);
       font-size: 1.8rem;
-      line-height: 1;
     }
 
-    .card h3 {
-      margin: 12px 0 8px;
-      font-size: 1.15rem;
+    .card h3 { margin: 10px 0 6px; }
+
+    .catalogue { background: #0f0f0e; }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
     }
 
-    .card p {
-      margin: 0;
-      font-size: .95rem;
+    .product-art {
+      min-height: 112px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(215, 180, 90, .18);
+      border-radius: 5px;
+      background: radial-gradient(circle, rgba(215,180,90,.13), transparent 70%);
+      color: var(--gold);
+      font-size: 2.5rem;
     }
 
-    .services {
-      border-top: 1px solid var(--line);
-      background: #151513;
+    .product-category {
+      margin-top: 14px;
+      color: var(--gold);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
     }
 
-    .products { background: #0f0f0f; }
+    .product-card h3 { margin: 4px 0; }
+
+    .price {
+      margin: 12px 0 16px;
+      color: var(--gold-light);
+      font-weight: 750;
+    }
+
+    .product-card .button {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .catalogue-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
 
     .contact {
-      border-top: 1px solid var(--line);
-      background: radial-gradient(ellipse at 20% 20%, rgba(156, 121, 48, .11), transparent 40%), #141413;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 48px;
-    }
-
-    .contact-details a,
-    .site-link {
+    .contact a {
       color: var(--gold);
       text-decoration: none;
       overflow-wrap: anywhere;
     }
 
-    form {
-      display: grid;
-      gap: 14px;
-    }
+    form { display: grid; gap: 13px; }
 
     label {
       display: grid;
@@ -356,36 +350,30 @@
 
     input, textarea {
       width: 100%;
-      padding: 12px 13px;
+      padding: 12px;
       border: 1px solid #49463e;
       border-radius: 4px;
       background: #101010;
-      color: var(--ink);
-      font: inherit;
+      color: var(--text);
     }
 
     textarea {
-      min-height: 120px;
+      min-height: 115px;
       resize: vertical;
     }
 
-    .form-note,
-    #form-status {
+    .form-note, #form-status {
       color: var(--muted);
       font-size: .88rem;
     }
 
-    #form-status {
-      min-height: 1.4em;
-      margin: 0;
-    }
+    #form-status { min-height: 1.4em; }
 
     footer {
-      padding: 25px 0 30px;
-      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: .88rem;
-      background: #0d0d0c;
     }
 
     .footer-inner {
@@ -393,63 +381,61 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 12px;
-      align-items: center;
     }
 
-    .floating-whatsapp {
+    .whatsapp-float {
       position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 58px;
-      height: 58px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 5;
+      width: 56px;
+      height: 56px;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: linear-gradient(135deg, #25d366, #1ebc5d);
+      background: #20c968;
       color: white;
-      text-decoration: none;
       font-size: 1.5rem;
-      box-shadow: 0 12px 30px rgba(37, 211, 102, .3);
-      z-index: 30;
+      text-decoration: none;
+      box-shadow: 0 10px 26px rgba(32, 201, 104, .28);
     }
 
     @media (max-width: 760px) {
       .nav {
         align-items: flex-start;
         flex-direction: column;
-        padding: 16px 0;
+        padding: 14px 0;
       }
 
-      .links { gap: 10px 16px; }
-      .hero { min-height: auto; padding: 72px 0 60px; }
       .hero-grid,
       .about-grid,
-      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      section { padding: 62px 0; }
+      section { padding: 58px 0; }
     }
 
     @media (max-width: 480px) {
       .wrap { width: min(100% - 32px, 1120px); }
-      .grid { grid-template-columns: 1fr; }
-      .card { padding: 21px; }
-      .stat-grid { grid-template-columns: 1fr; }
-      .actions { align-items: stretch; flex-direction: column; }
+      .grid, .about-list { grid-template-columns: 1fr; }
+      .actions { flex-direction: column; }
       .actions .button { width: 100%; }
       .footer-inner { flex-direction: column; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .button { transition: none; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="OLAMILEKAN GLOBAL WORLD INVESTMENT home">
-        <span class="brand-mark" aria-hidden="true"></span>
+      <a class="brand" href="#home" aria-label="OLAMILEKAN GLOBAL WORLD home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
         <span class="brand-name">OLAMILEKAN<br>GLOBAL WORLD INVESTMENT</span>
       </a>
       <nav class="links" aria-label="Main navigation">
@@ -468,33 +454,21 @@
         <div class="hero-copy">
           <div class="eyebrow">Trade · Technology · Everyday essentials</div>
           <h1>One World.<br><span>Your Vision.</span></h1>
-          <p>We connect businesses and households with premium technology, everyday supermarket essentials, African products, logistics, and international trade support from Nigeria to the world.</p>
+          <p>Discover technology, supermarket essentials and African products, alongside logistics and international trade enquiries from Nigeria to the world.</p>
           <div class="actions">
-            <a class="button" href="#services">Explore our services</a>
-            <a class="button secondary" href="#contact">Get in touch</a>
+            <a class="button" href="#products">Explore products</a>
+            <a class="button secondary" href="#contact">Contact us</a>
           </div>
         </div>
-
-        <aside class="hero-panel" aria-label="Business summary">
-          <div class="eyebrow">Why customers choose us</div>
-          <div class="stat-grid">
-            <div class="stat">
-              <strong>Tech</strong>
-              <span>Phones, iPads & laptops</span>
-            </div>
-            <div class="stat">
-              <strong>Trade</strong>
-              <span>Global business support</span>
-            </div>
-            <div class="stat">
-              <strong>Market</strong>
-              <span>African products & essentials</span>
-            </div>
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>WhatsApp response support</span>
-            </div>
-          </div>
+        <aside class="hero-panel" aria-label="Business areas">
+          <div class="eyebrow">Our business</div>
+          <h2>Global opportunity. Personal service.</h2>
+          <ul>
+            <li>Phones, iPads, laptops and accessories</li>
+            <li>Supermarket essentials</li>
+            <li>African products marketplace</li>
+            <li>Logistics and international trade</li>
+          </ul>
         </aside>
       </div>
     </section>
@@ -506,161 +480,169 @@
           <h2>Connecting people with products and services.</h2>
         </div>
         <div>
-          <p>OLAMILEKAN GLOBAL WORLD INVESTMENT brings together a modern business ecosystem built around technology, online retail, African goods, logistics, and international trade. We help customers access trusted products and reliable support with a professional, customer-first experience.</p>
-          <ul class="about-list" aria-label="Core business focus areas">
+          <p>OLAMILEKAN GLOBAL WORLD INVESTMENT is founded by Bello Ashimiu Olalekan. We bring together technology, online retail, African products, logistics and international trade enquiries in one customer-focused business.</p>
+          <ul class="about-list">
             <li>Technology products</li>
             <li>Supermarket essentials</li>
-            <li>African marketplace</li>
+            <li>African products</li>
             <li>Logistics support</li>
             <li>International trade</li>
-            <li>Responsive customer care</li>
+            <li>Customer service</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="services" id="services" aria-labelledby="services-title">
+    <section class="services" id="services">
       <div class="wrap">
         <div class="section-heading">
           <div class="eyebrow">What we do</div>
-          <h2 id="services-title">Services for a connected world</h2>
-          <p>Explore our offering and contact us for current availability, pricing, and delivery support.</p>
+          <h2>Services for a connected world</h2>
+          <p>Contact us to confirm product availability, pricing, delivery options and business service details.</p>
         </div>
         <div class="grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">◇</div>
-            <h3>Technology</h3>
-            <p>Phones, tablets, laptops, and accessories for businesses and everyday use.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">✳</div>
-            <h3>Online Supermarket</h3>
-            <p>Everyday essentials and household products delivered with convenience in mind.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">◈</div>
-            <h3>African Products</h3>
-            <p>Curated goods that celebrate African identity, culture, and craftsmanship.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">⌁</div>
-            <h3>Logistics</h3>
-            <p>Support for deliveries, coordination, and dependable movement of goods.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">⇄</div>
-            <h3>International Trade</h3>
-            <p>Business support for sourcing, selling, and connecting markets across borders.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">✦</div>
-            <h3>Customer Support</h3>
-            <p>Friendly guidance from enquiry to order, with quick WhatsApp communication.</p>
-          </article>
+          <article class="card"><div class="card-icon" aria-hidden="true">◇</div><h3>Technology store</h3><p>Phones, iPads, laptops and accessories for work, school and everyday use.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">✳</div><h3>Online supermarket</h3><p>Enquire about everyday household products and supermarket essentials.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">◈</div><h3>African products</h3><p>Discover African goods and ask us about current selections and sourcing.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">⌁</div><h3>Logistics</h3><p>Contact us to discuss delivery coordination and movement of goods.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">⇄</div><h3>International trade</h3><p>Business enquiries about sourcing and connecting markets across borders.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">✦</div><h3>Customer support</h3><p>Reach our team directly for product information and order assistance.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="products" class="products" aria-labelledby="products-title">
+    <section class="catalogue" id="products">
       <div class="wrap">
         <div class="section-heading">
-          <div class="eyebrow">Products</div>
-          <h2 id="products-title">Featured product categories</h2>
-          <p class="product-note">Availability changes regularly. Reach out to confirm the latest stock and best-fit recommendations.</p>
+          <div class="eyebrow">Product catalogue</div>
+          <h2>Explore our categories</h2>
+          <p>Ask us for current stock and a quote in Nigerian Naira before placing an order.</p>
         </div>
         <div class="grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">◇</div>
-            <h3>Technology Products</h3>
-            <p>Mobile devices, tablets, laptops, and productivity accessories.</p>
+          <article class="card product-card">
+            <div class="product-art" aria-hidden="true">▯</div>
+            <span class="product-category">Technology</span>
+            <h3>Smartphones</h3>
+            <p>Ask about available phone brands, models, storage and condition.</p>
+            <div class="price">₦ Price on request</div>
+            <a class="button" href="https://wa.me/2348025592137?text=Hello%2C%20please%20send%20me%20current%20smartphone%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">✳</div>
-            <h3>Household Essentials</h3>
-            <p>Everyday supermarket items and convenience-focused essentials.</p>
+          <article class="card product-card">
+            <div class="product-art" aria-hidden="true">▭</div>
+            <span class="product-category">Technology</span>
+            <h3>iPads &amp; tablets</h3>
+            <p>Enquire about available models for work, study and entertainment.</p>
+            <div class="price">₦ Price on request</div>
+            <a class="button" href="https://wa.me/2348025592137?text=Hello%2C%20please%20send%20me%20current%20iPad%20and%20tablet%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">◈</div>
-            <h3>African Goods</h3>
-            <p>Products that preserve culture, quality, and local value.</p>
+          <article class="card product-card">
+            <div class="product-art" aria-hidden="true">▱</div>
+            <span class="product-category">Technology</span>
+            <h3>Laptops</h3>
+            <p>Tell us your preferred specifications and we can confirm options.</p>
+            <div class="price">₦ Price on request</div>
+            <a class="button" href="https://wa.me/2348025592137?text=Hello%2C%20please%20send%20me%20current%20laptop%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">⌁</div>
-            <h3>Business Supplies</h3>
-            <p>Practical sourcing options for entrepreneurs and growing teams.</p>
+          <article class="card product-card">
+            <div class="product-art" aria-hidden="true">⌁</div>
+            <span class="product-category">Technology</span>
+            <h3>Accessories</h3>
+            <p>Ask about chargers, cases, cables, audio devices and more.</p>
+            <div class="price">₦ Price on request</div>
+            <a class="button" href="https://wa.me/2348025592137?text=Hello%2C%20please%20send%20me%20current%20accessory%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">⇄</div>
-            <h3>Trade Solutions</h3>
-            <p>Cross-border support designed around reliable exchange and service.</p>
+          <article class="card product-card">
+            <div class="product-art" aria-hidden="true">✳</div>
+            <span class="product-category">Supermarket</span>
+            <h3>Everyday essentials</h3>
+            <p>Enquire about grocery, food and household product availability.</p>
+            <div class="price">₦ Price on request</div>
+            <a class="button" href="https://wa.me/2348025592137?text=Hello%2C%20please%20send%20me%20current%20supermarket%20product%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">✦</div>
-            <h3>Custom Orders</h3>
-            <p>Tell us what you need and we will help identify the best option.</p>
+          <article class="card product-card">
+            <div class="product-art" aria-hidden="true">◈</div>
+            <span class="product-category">African products</span>
+            <h3>African goods</h3>
+            <p>Ask us about current products, selections and sourcing options.</p>
+            <div class="price">₦ Price on request</div>
+            <a class="button" href="https://wa.me/2348025592137?text=Hello%2C%20please%20send%20me%20current%20African%20product%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
           </article>
         </div>
-        <div class="actions">
-          <a class="button" href="#contact">Ask about products</a>
-        </div>
+        <p class="catalogue-note">Prices are requested in Nigerian Naira (₦) and confirmed directly with our team. Availability and prices may change; please confirm before ordering.</p>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
+    <section class="contact" id="contact">
       <div class="wrap contact-grid">
-        <div class="contact-details">
+        <div>
           <div class="eyebrow">Contact</div>
-          <h2 id="contact-title">How can we help?</h2>
-          <p>Send an enquiry via WhatsApp or email us directly for product, trade, and service information.</p>
+          <h2>How can we help?</h2>
+          <p>Contact us for product enquiries, orders, current pricing and business services.</p>
+          <p><strong>Founder:</strong> Bello Ashimiu Olalekan</p>
           <p><strong>Email:</strong> <a href="mailto:olalekanb817@gmail.com">olalekanb817@gmail.com</a></p>
           <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348025592137" target="_blank" rel="noopener noreferrer">+234 802 559 2137</a></p>
         </div>
 
-        <div>
-          <form id="contact-form">
-            <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
-            <label for="email">Your email (optional)<input id="email" name="email" type="email" autocomplete="email"></label>
-            <label for="message">Your message<textarea id="message" name="message" required></textarea></label>
-            <p class="form-note">This form opens WhatsApp with your message. It does not send email. To email us, use the link above.</p>
-            <button class="button" type="submit">Continue to WhatsApp</button>
-            <p id="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+        <form id="contact-form">
+          <label for="name">Your name
+            <input id="name" name="name" autocomplete="name" required>
+          </label>
+          <label for="email">Your email (optional)
+            <input id="email" name="email" type="email" autocomplete="email">
+          </label>
+          <label for="message">Your message
+            <textarea id="message" name="message" required></textarea>
+          </label>
+          <p class="form-note">The form opens WhatsApp with your message. To email us, use the email address listed on this page.</p>
+          <button class="button" type="submit">Send enquiry on WhatsApp</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-inner">
-      <span>© <span id="year"></span> OLAMILEKAN GLOBAL WORLD INVESTMENT</span>
-      <a class="site-link" href="#home">Back to top ↑</a>
+      <strong>OLAMILEKAN GLOBAL WORLD INVESTMENT</strong>
       <span>One World. Your Vision.</span>
+      <span>© <span id="year"></span> All Rights Reserved.</span>
+      <span>Lagos, Nigeria.</span>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20want%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">✆</a>
+  <a class="whatsapp-float" href="https://wa.me/2348025592137" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">☎</a>
 
   <script>
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
+    document.getElementById("contact-form").addEventListener(
+      "submit",
+      function(event) {
+        event.preventDefault();
 
-      const data = new FormData(form);
-      const email = data.get('email') ? `\nEmail: ${data.get('email')}` : '';
-      const text = `Hello, my name is ${data.get('name')}.${email}\n\n${data.get('message')}`;
-      const whatsappUrl = `https://wa.me/2348025592137?text=${encodeURIComponent(text)}`;
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-      status.textContent = 'Opening WhatsApp with your message. Review it there and tap Send.';
+        if (!name || !message) return;
 
-      const popup = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      if (!popup) {
-        window.location.assign(whatsappUrl);
+        const text =
+          "Hello OLAMILEKAN GLOBAL WORLD INVESTMENT.\n\n" +
+          "Name: " + name + "\n" +
+          "Email: " + (email || "Not provided") + "\n" +
+          "Message: " + message;
+
+        const url =
+          "https://wa.me/2348025592137?text=" +
+          encodeURIComponent(text);
+
+        document.getElementById("form-status").textContent =
+          "Opening WhatsApp to send your enquiry.";
+
+        window.location.href = url;
       }
-    });
+    );
   </script>
 </body>
 </html>
